@@ -8,13 +8,15 @@ const $domeElements = {
     load250: () => document.querySelector('#btnLoad250'),
     loadKanye: () => document.querySelector('#btnLoadQuote'),
     ul: () => document.querySelector('#root > ul')
+
 }
 
 $domeElements.loadBtn().addEventListener('click', loadTowns);
 $domeElements.load250().addEventListener('click', load250);
 $domeElements.loadKanye().addEventListener('click', loadWest);
 
-function loadWest() {
+function loadWest(e) {
+    e.preventDefault();
 
     fetch(urlQuotes)
         .then(r => r.json())
@@ -24,11 +26,12 @@ function loadWest() {
         .catch(e => console.error(e));
 }
 
-function load250() {
+function load250(e) {
+    e.preventDefault();
     fetch(urlCountries)
         .then(r => r.json())
         .then(appendCities)
-        .catch(e => console.error(e));
+        .catch(e => aconsole.error(e));
 }
 
 function loadTowns(e) {
