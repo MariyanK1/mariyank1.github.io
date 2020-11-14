@@ -1,75 +1,57 @@
-function solve() {
-    const url = 'https://softuniexercise-a2960.firebaseio.com/Books.json';
-    const $submitButton = document.querySelector('body > form:nth-child(3) > button:nth-child(8)');
-    const $loadBooksButton = document.querySelector('#loadBooks');
-    const $titleInput = document.querySelector('#title');
-    const $authorInput = document.querySelector('#author');
-    const $isbnInput = document.querySelector('#isbn');
-    const $tableBody = document.querySelector('body > table:nth-child(2) > tbody:nth-child(2)');
+const urlCountries = 'https://restcountries.eu/rest/v2/all';
+const urlQuotes = 'https://api.kanye.rest';
 
+const $domeElements = {
+    input: () => document.querySelector('#towns'),
+    loadBtn: () => document.querySelector('#btnLoadTowns'),
+    root: () => document.querySelector('#root'),
+    load250: () => document.querySelector('#btnLoad250'),
+    loadKanye: () => document.querySelector('#btnLoadQuote'),
+    ul: () => document.querySelector('#root > ul')
 
-    //--The value of isbn's input tag has a typo--//
-
-    $submitButton.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        if ($tableBody.innerHTML !== '') {
-            $tableBody.innerHTML = '';
-        }
-
-        const bookOBj = fetch(url, {
-            method: "POST",
-            body: JSON.stringify({ "ISBN": $isbnInput.value, "author": $authorInput.value, "title": $titleInput.value })
-        }).then(fetchAll)
-            .catch(e => alert(e))
-    })
-
-    $loadBooksButton.addEventListener('click', () => {
-        if ($tableBody.innerHTML !== '') {
-            $tableBody.innerHTML = '';
-        }
-
-        fetchAll();
-    })
-
-
-    function fetchAll() {
-        fetch(url)
-            .then(x => x.json())
-            .then(data => {
-                Object.entries(data).forEach(entry => {
-                    const { ISBN, author, title } = entry[1];
-                    const $tr = createEl('tr');
-                    const $tdTitle = createEl('td', title);
-                    const $tdAuthor = createEl('td', author);
-                    const $tdISBN = createEl('td', ISBN);
-                    const $tdButtons = createEl('td');
-                    const $deleteBtn = createEl('button', 'Delete');
-                    const $editBtn = createEl('button', 'Edit');
-                    $tr.appendChild($tdTitle);
-                    $tr.appendChild($tdAuthor);
-                    $tr.appendChild($tdISBN);
-                    $tdButtons.appendChild($editBtn);
-                    $tdButtons.appendChild($deleteBtn);
-                    $tr.appendChild($tdButtons);
-                    $tableBody.appendChild($tr);
-                    $editBtn.addEventListener('click', () => {
-                    });
-                });
-            })
-            .catch(e => alert(e));
-    }
-    function createEl(type, text) {
-        const el = document.createElement(type);
-
-        if (text) {
-            el.textContent = text;
-        }
-
-        return el;
-    }
 }
 
-solve()
+$domeElements.loadBtn().addEventListener('click', loadTowns);
+$domeElements.load250().addEventListener('click', load250);
+$domeElements.loadKanye().addEventListener('click', loadWest);
 
+function loadWest() {
 
+    fetch(urlQuotes)
+        .then(r => r.json())
+        .then(({ quote }) => {
+            $domeElements.ul().innerHTML = `<lu><li>${quote}</li></lu>`;
+        })
+        .catch(e => alert(e));
+}
+
+function load250() {
+    fetch(urlCountries)
+        .then(r => r.json())
+        .then(appendCities)
+        .catch(e => alert(e));
+}
+
+function loadTowns(e) {
+    e.preventDefault();
+
+    const { value } = $domeElements.input();
+    const towns = value.split(', ').map((t) => { return { name: t } });
+
+    appendCities(towns);
+}
+
+function appendCities(towns) {
+    getTemplate()
+        .then(tempSource => {
+            const template = Handlebars.compile(tempSource);
+
+            const html = template({ towns });
+
+            $domeElements.root().innerHTML = html;
+        });
+}
+
+function getTemplate() {
+    return fetch('./template.hbs').then((r) => r.text());
+}
