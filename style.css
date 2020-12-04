@@ -53,12 +53,12 @@ p {
 }
 
 p a {
-    transition: background-color 0.5s ease;
+    background-color: white;
+    color: black;
 }
 
 p a:hover {
-    font-size: larger;
-    background-color: white;
+    font-size: 30px;
 }
 
 @media only screen and (max-width: 1125px) {
