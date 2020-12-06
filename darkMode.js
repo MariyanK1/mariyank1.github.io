@@ -10,7 +10,6 @@ function darkMode() {
         thatsAll: () => document.querySelector('#thatsAll'),
         formValidator: () => document.querySelector('#formValidator'),
         techUSed: () => document.querySelector('#techUsed'),
-
     }
 
     $selectors.btn().addEventListener('click', e => {
@@ -51,15 +50,12 @@ function darkMode() {
             el.style.color = 'black';
             return el;
         }
-
     }
-
+    
     function changeColorWhite(el) {
         if (el) {
             el.style.color = 'white';
             return el;
         }
-
     }
-
 }
