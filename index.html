@@ -1,66 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+function darkMode() {
 
-<!-- HEADER -->
+    const $selectors = {
+        btn: () => document.querySelector('#darkMode'),
+        h1: () => document.getElementsByTagName('h1')[0],
+        p: () => document.getElementsByTagName('p')[0],
+        h2: () => document.getElementsByTagName('h2')[0],
+        span: () => document.querySelector('span'),
+        img: () => document.querySelector('#pic'),
+        thatsAll: () => document.querySelector('#thatsAll'),
+        meal_finder: () => document.querySelector('#meal-finder'),
+        techUSed: () => document.querySelector('#techUsed'),
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <script src="darkMode.js"></script>
-    <title>Mariyan's Project Page</title>
-</head>
+    }
 
-<body>
-    <!-- HEADER 1 -->
-    <h1>Mariyan Maksimov's Project Page</h1>
+    $selectors.btn().addEventListener('click', e => {
+        e.preventDefault();
+        switch ($selectors.btn().textContent) {
+            case 'switch to dark mode':
+                document.body.style.backgroundColor = 'black';
+                $selectors.btn().textContent = 'switch to light mode';
+                $selectors.img().src = "https://images2.imgbox.com/b1/8f/nYGqGA6p_o.png";
+                $selectors.thatsAll().src = "https://images2.imgbox.com/1c/c1/bLYVqJtQ_o.png";
+                changeColorWhite($selectors.p());
+                changeColorWhite($selectors.h1());
+                changeColorWhite($selectors.h2());
+                changeColorWhite($selectors.span());
+                changeColorWhite($selectors.meal_finder());
+                changeColorWhite($selectors.techUSed());
+                break;
 
-    <!-- BUTTON DARK MODE -->
-    <button id="darkMode">switch to dark mode</button>
+            default:
+                document.body.style.backgroundColor = 'white';
+                $selectors.btn().textContent = 'switch to dark mode';
+                $selectors.img().src = "https://avatars2.githubusercontent.com/u/58628678?s=400&u=924861bafd3fddf4103190598da3b9f59f495983&v=4";
+                $selectors.thatsAll().src = "https://images2.imgbox.com/66/b2/3NDjZFfy_o.png";
+                changeColorBlack($selectors.h1());
+                changeColorBlack($selectors.p());
+                changeColorBlack($selectors.h2());
+                changeColorBlack($selectors.span());
+                changeColorBlack($selectors.meal_finder());
+                changeColorBlack($selectors.techUSed());
+                break;
+        }
 
-    <!-- MY IMAGE -->
-    <img src="https://avatars2.githubusercontent.com/u/58628678?s=400&u=924861bafd3fddf4103190598da3b9f59f495983&v=4"
-        alt="picture-of-me-while-skydiving" id="pic">
+    })
 
-    <!-- INTRO -->
-    <p id="intro">Welcome to my page! Thanks for stopping by. <br>I'm partially self-taught developer with a passion for
-        the
-        Web.<br> Also love building small SPA's when I have or don't have the time. <br>
-        Fascinated by JavaScript and its quirks.
-        <br>Currently looking for a <i>Frontend position or Internship</i>. <br><br>
 
-        <b>Certifications:</b><br>
-        <a href="https://softuni.bg/certificates/details/77208/155afb9f" target="_blank">Programming Basics with
-            C#</a><br>
-        <a href="https://softuni.bg/certificates/details/85685/1703a398" target="_blank">JS
-            Fundamentals</a><br>
-        <a href="https://softuni.bg/certificates/details/90448/1f5f1938" target="_blank">JS
-            Advanced</a>
-    </p> <br><br>
+    function changeColorBlack(el) {
+        if (el) {
+            el.style.color = 'black';
+            return el;
+        }
 
-    <!-- CONTACT -->
-    <div id="contact">
-        <span><b>Contact me:</b><br>+49 (0) 178 9747 050 or mariyan.pickup@gmail.com</span>
-    </div>
+    }
 
-    <!-- MY PROJECTS -->
-    <h2>My Projects:</h2>
-    <p id="meal-finder"><b>➤Meal Finder</b> - <a target="_blank" href="https://mariyank1.github.io/meal-finder/"
-            class="live">Live</a>
-        <a target="_blank" href="https://github.com/MariyanK1/mariyank1.github.io/tree/main/meal-finder"
-            class="source">Source Code</a>
-    </p>
-    <span id="techUsed"><b>Technologies Used</b> =></span>
-    <span class="tech">Vanilla JS, HTML, CSS</span><br><br><br>
-    <span id="movie">➤Movie Seat Booking</span>
+    function changeColorWhite(el) {
+        if (el) {
+            el.style.color = 'white';
+            return el;
+        }
 
-    <!-- SCRIPTS -->
-    <script>darkMode()</script>
-</body> <br><br>
+    }
 
-<!-- FOOTER -->
-<footer><img id="thatsAll" src="https://images2.imgbox.com/66/b2/3NDjZFfy_o.png" alt="That's all Folks" srcset="">
-</footer>
+}
 
-</html>
+darkMode()
