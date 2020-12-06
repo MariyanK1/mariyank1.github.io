@@ -22,8 +22,9 @@
     border-radius: 9px;
 }
 
-#formValidator {
+#meal-finder {
     font-size: var(--main-font-size);
+    text-decoration: none;
 }
 
 #thatsAll {
@@ -44,6 +45,7 @@
     text-transform: uppercase;
     cursor: pointer;
     font-size: var(--main-button-font-size);
+    text-decoration: none;
 }
 
 .source {
@@ -55,6 +57,8 @@
     text-transform: uppercase;
     cursor: pointer;
     font-size: var(--main-button-font-size);
+    text-decoration: none;
+
 }
 
 
