@@ -28,10 +28,11 @@
 
 #thatsAll {
     width: 26%;
-    border: 10px solid darkgrey;
+    border: 8px solid darkgrey;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 50%;
 }
 
 .live {
@@ -81,13 +82,10 @@
     display: block;
     width: 300px;
     border-radius: 50%;
+    border: 8px solid darkgrey;
 }
 
-h1 {
-    background-color: darkgrey;
-    border-radius: 50%;
-    opacity: 78%;
-}
+
 h1, #intro {
     display: block;
     margin: 0;
