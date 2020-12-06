@@ -8,8 +8,9 @@ function darkMode() {
         span: () => document.querySelector('span'),
         img: () => document.querySelector('#pic'),
         thatsAll: () => document.querySelector('#thatsAll'),
-        formValidator: () => document.querySelector('#formValidator'),
+        meal_finder: () => document.querySelector('#meal-finder'),
         techUSed: () => document.querySelector('#techUsed'),
+
     }
 
     $selectors.btn().addEventListener('click', e => {
@@ -24,7 +25,7 @@ function darkMode() {
                 changeColorWhite($selectors.h1());
                 changeColorWhite($selectors.h2());
                 changeColorWhite($selectors.span());
-                changeColorWhite($selectors.formValidator());
+                changeColorWhite($selectors.meal_finder());
                 changeColorWhite($selectors.techUSed());
                 break;
 
@@ -37,7 +38,7 @@ function darkMode() {
                 changeColorBlack($selectors.p());
                 changeColorBlack($selectors.h2());
                 changeColorBlack($selectors.span());
-                changeColorBlack($selectors.formValidator());
+                changeColorBlack($selectors.meal_finder());
                 changeColorBlack($selectors.techUSed());
                 break;
         }
@@ -50,12 +51,15 @@ function darkMode() {
             el.style.color = 'black';
             return el;
         }
+
     }
-    
+
     function changeColorWhite(el) {
         if (el) {
             el.style.color = 'white';
             return el;
         }
+
     }
+
 }
