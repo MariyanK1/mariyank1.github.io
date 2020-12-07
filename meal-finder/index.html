@@ -1,70 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- HEADER -->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-    <title>Mariyan's Project Page</title>
+    <title>Meal Finder</title>
 </head>
 
 <body>
-    <!-- HEADER 1 -->
-    <h1>Mariyan Maksimov's Project Page</h1>
+    <div class="container">
+        <h1>Meal Finder</h1>
+        <div class="flex">
+            <form class="flex" id="submit">
+                <input type="text" id="search" placeholder="Search for meals..">
+                <button class="search-btn" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <button class="random-btn" id="random">
+                <i class="fas fa-random"></i>
 
-    <!-- BUTTON DARK MODE -->
-    <button id="darkMode">switch to dark mode</button>
-
-    <!-- MY IMAGE -->
-    <img src="https://avatars2.githubusercontent.com/u/58628678?s=400&u=924861bafd3fddf4103190598da3b9f59f495983&v=4"
-        alt="picture-of-me-while-skydiving" id="pic">
-
-    <!-- INTRO -->
-    <p id="intro">Welcome to my page! Thanks for stopping by. <br>I'm partially self-taught developer with a passion for
-        the
-        Web.<br> Also love building small SPAs when I have or don't have the time. <br>
-        Fascinated by JavaScript and its quirks.
-        <br>Currently looking for a <i>Frontend position or Internship</i>. <br><br>
-
-        <b>Certifications:</b><br>
-        <a href="https://softuni.bg/certificates/details/77208/155afb9f" target="_blank">Programming Basics with
-            C#</a><br>
-        <a href="https://softuni.bg/certificates/details/85685/1703a398" target="_blank">JS
-            Fundamentals</a><br>
-        <a href="https://softuni.bg/certificates/details/90448/1f5f1938" target="_blank">JS
-            Advanced</a>
-    </p> <br><br>
-
-    <!-- CONTACT -->
-    <div id="contact">
-        <span><b>Contact me:</b><br>+49 (0) 178 9747 050 or <a
-                href="mailto:mariyan.pickup@gmail.com">mariyan.pickup@gmail.com</a></span>
+            </button>
+        </div>
+        <div id="result"></div>
+        <div id="meals" class="meals"></div>
+        <div id="single-meal"></div>
     </div>
 
-    <!-- MY PROJECTS -->
-    <h2>My Recent Projects:</h2>
-    <p id="meal-finder"><b>✔️Meal Finder</b> - <a target="_blank" href="https://mariyank1.github.io/meal-finder/"
-            class="live">Live</a>
-        <a target="_blank" href="https://github.com/MariyanK1/mariyank1.github.io/tree/main/meal-finder"
-            class="source">Source</a>
-    </p>
-    <span id="techUsed"><b>Tech used</b>➔</span>
-    <span class="tech">JS</span>
-    <span class="tech">HTML</span>
-    <span class="tech">CSS</span>
-    <br><br><br>
-
-</body> <br><br>
-
-<!-- SCRIPTS -->
-<script src="darkMode.js"></script>
-<script>darkMode()</script>
-
-
-<!-- FOOTER -->
-<footer><img id="thatsAll" src="https://images2.imgbox.com/66/b2/3NDjZFfy_o.png" alt="That's all Folks" srcset="">
-</footer>
+    <script src="script.js"></script>
+</body>
 
 </html>
