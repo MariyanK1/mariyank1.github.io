@@ -4,7 +4,7 @@
     --main-button-font-size: 20px;
 }
 * {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
 
 #techUsed {
@@ -16,10 +16,12 @@
 .tech {
     color: white;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 18px;
     background-color: cornflowerblue;
-    border-radius: 9px;
+    padding: 5px;
+    border: solid;
+    border-color: black;
 }
 
 #meal-finder {
