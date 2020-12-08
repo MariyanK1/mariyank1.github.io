@@ -145,7 +145,7 @@ h2 {
     right: 0px;
     }
 
-    #skills {
+    * {
         word-wrap: break-word;
     }
 }
@@ -155,7 +155,7 @@ h2 {
     right: 0px;
     }
 
-    #skills {
+   * {
         word-wrap: break-word;
     }
 }
@@ -165,7 +165,7 @@ h2 {
     right: 50px;
     }
 
-    #skills {
+    * {
         word-wrap: break-word;
     }
 }
@@ -174,9 +174,11 @@ h2 {
     #intro {
     position: initial;
     }
-#skills {
+    
+   * {
         word-wrap: break-word;
     }
+    
     #pic {
         width: 25%;
         display: block;
@@ -198,9 +200,10 @@ h2 {
     position: initial;
     }
 
-    #skills {
+    * {
         word-wrap: break-word;
     }
+
     #pic {
         display: block;
         margin-left: auto;
