@@ -7,11 +7,11 @@
     font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
 
-#techUsed {
-    font-size: 16px;
-    text-transform: uppercase;
+#contact a {
+    color: white;
+    background-color: cornflowerblue;
+    text-decoration: none;
 }
-
 #skills {
     background-color: cornflowerblue;
     color: white;
@@ -28,7 +28,7 @@
     border-color: black;
 }
 
-#meal-finder {
+.projectTitle {
     font-size: var(--main-font-size);
     text-decoration: none;
 }
