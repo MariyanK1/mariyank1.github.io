@@ -4,6 +4,8 @@
     --main-font-size: 29px;
     --main-button-font-size: 20px;
 }
+
+
 * {
     font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
@@ -21,6 +23,8 @@
 #skills {
     background-color: cornflowerblue;
     color: white;
+    font-weight: bold;
+    letter-spacing: 3px;
 }
 
 .tech {
@@ -140,11 +144,19 @@ h2 {
     #intro {
     right: 0px;
     }
+
+    #skills {
+        word-wrap: break-word;
+    }
 }
 
 @media only screen and (max-width: 1065px) {
     #intro {
     right: 0px;
+    }
+
+    #skills {
+        word-wrap: break-word;
     }
 }
 
@@ -152,13 +164,19 @@ h2 {
     #intro {
     right: 50px;
     }
+
+    #skills {
+        word-wrap: break-word;
+    }
 }
 
 @media only screen and (max-width: 1048px) {
     #intro {
     position: initial;
     }
-
+#skills {
+        word-wrap: break-word;
+    }
     #pic {
         width: 25%;
         display: block;
@@ -180,6 +198,9 @@ h2 {
     position: initial;
     }
 
+    #skills {
+        word-wrap: break-word;
+    }
     #pic {
         display: block;
         margin-left: auto;
