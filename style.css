@@ -8,19 +8,23 @@
 }
 
 #techUsed {
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
 }
 
+#skills {
+    background-color: cornflowerblue;
+    color: white;
+}
 
 .tech {
     color: white;
     text-transform: uppercase;
     font-weight: bolder;
-    font-size: 18px;
+    font-size: 16px;
     background-color: cornflowerblue;
     padding: 5px;
-    border: solid;
+    border: solid 1px;
     border-color: black;
 }
 
@@ -48,14 +52,13 @@
 }
 
 .source {
-        background-color: #4CAF50;
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 10px;
     margin: 2px;
     font-size: 16px;
     text-transform: uppercase;
-
 }
 
 
