@@ -8,9 +8,10 @@ function darkMode() {
         span: () => document.querySelector('span'),
         img: () => document.querySelector('#pic'),
         thatsAll: () => document.querySelector('#thatsAll'),
-        meal_finder: () => document.querySelector('#meal-finder'),
-        techUSed: () => document.querySelector('#techUsed'),
-        contact: () => document.querySelector('#contact')
+        meal_finder: () => document.querySelectorAll('.projectTitle'),
+        techUSed: () => document.querySelectorAll('.techUsed'),
+        contact: () => document.querySelector('#contact'),
+        email: () => document.querySelector('#contact a')
     }
 
     $selectors.btn().addEventListener('click', e => {
@@ -28,6 +29,7 @@ function darkMode() {
                 changeColorWhite($selectors.span());
                 changeColorWhite($selectors.meal_finder());
                 changeColorWhite($selectors.techUSed());
+                changeColorWhite($selectors.email());
                 break;
 
             default:
@@ -42,6 +44,7 @@ function darkMode() {
                 changeColorBlack($selectors.span());
                 changeColorBlack($selectors.meal_finder());
                 changeColorBlack($selectors.techUSed());
+                changeColorBlack($selectors.email());
                 break;
         }
 
@@ -49,6 +52,15 @@ function darkMode() {
 
 
     function changeColorBlack(el) {
+        if (NodeList.prototype.isPrototypeOf(el)) {
+            for (let i = 0; i < el.length; i++) {
+                el[i].style.color = 'black';
+            }
+
+            return el;
+        }
+
+
         if (el) {
             el.style.color = 'black';
             return el;
@@ -57,6 +69,15 @@ function darkMode() {
     }
 
     function changeColorWhite(el) {
+        if (NodeList.prototype.isPrototypeOf(el)) {
+            for (let i = 0; i < el.length; i++) {
+                el[i].style.color = 'white';
+            }
+
+            return el;
+        }
+
+
         if (el) {
             el.style.color = 'white';
             return el;
