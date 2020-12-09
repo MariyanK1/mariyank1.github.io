@@ -11,7 +11,8 @@ function darkMode() {
         meal_finder: () => document.querySelectorAll('.projectTitle'),
         techUSed: () => document.querySelectorAll('.techUsed'),
         contact: () => document.querySelector('#contact'),
-        email: () => document.querySelector('#contact a')
+        email: () => document.querySelector('#contact a'),
+        cert: () => document.querySelectorAll('#intro a')
     }
 
     $selectors.btn().addEventListener('click', e => {
@@ -30,6 +31,7 @@ function darkMode() {
                 changeColorWhite($selectors.meal_finder());
                 changeColorWhite($selectors.techUSed());
                 changeColorWhite($selectors.email());
+                changeColorWhite($selectors.cert());
                 break;
 
             default:
@@ -45,6 +47,8 @@ function darkMode() {
                 changeColorBlack($selectors.meal_finder());
                 changeColorBlack($selectors.techUSed());
                 changeColorBlack($selectors.email());
+                changeColorBlack($selectors.cert());
+
                 break;
         }
 
