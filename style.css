@@ -22,9 +22,10 @@
 
 #skills {
     background-color: cornflowerblue;
-    color: white;
+    color: black;
     font-weight: bold;
     letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .tech {
@@ -132,21 +133,19 @@ h2 {
 }
 
 #intro a {
-    background-color: white;
     color: black;
 }
 
-#intro a:hover {
-    font-size: 30px;
+
+#contact a {
+    color: black;
+    background-color: cornflowerblue;
+    text-decoration: none;
 }
 
 @media only screen and (max-width: 1125px) {
     #intro {
     right: 0px;
-    }
-
-    * {
-        word-wrap: break-word;
     }
 }
 
@@ -155,28 +154,17 @@ h2 {
     right: 0px;
     }
 
-   * {
-        word-wrap: break-word;
-    }
 }
 
 @media only screen and (max-width: 1020px) {
     #intro {
     right: 50px;
     }
-
-    * {
-        word-wrap: break-word;
-    }
 }
 
 @media only screen and (max-width: 1048px) {
     #intro {
     position: initial;
-    }
-    
-   * {
-        word-wrap: break-word;
     }
     
     #pic {
@@ -200,10 +188,7 @@ h2 {
     position: initial;
     }
 
-    * {
-        word-wrap: break-word;
-    }
-
+   
     #pic {
         display: block;
         margin-left: auto;
