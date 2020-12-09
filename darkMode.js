@@ -1,92 +1,95 @@
-function darkMode() {
+const search = document.getElementById('search');
+const result = document.getElementById('result');
+const more = document.getElementById('more');
+const btn = document.querySelector('button');
 
-    const $selectors = {
-        btn: () => document.querySelector('#darkMode'),
-        h1: () => document.getElementsByTagName('h1')[0],
-        p: () => document.getElementsByTagName('p')[0],
-        h2: () => document.getElementsByTagName('h2')[0],
-        span: () => document.querySelector('span'),
-        img: () => document.querySelector('#pic'),
-        thatsAll: () => document.querySelector('#thatsAll'),
-        meal_finder: () => document.querySelectorAll('.projectTitle'),
-        techUSed: () => document.querySelectorAll('.techUsed'),
-        contact: () => document.querySelector('#contact'),
-        email: () => document.querySelector('#contact a'),
-        cert: () => document.querySelectorAll('#intro a')
-    }
+const apiURL = 'https://api.lyrics.ovh';
 
-    $selectors.btn().addEventListener('click', e => {
-        e.preventDefault();
-        switch ($selectors.btn().textContent) {
-            case 'switch to dark mode':
-                document.body.style.backgroundColor = 'black';
-                $selectors.btn().textContent = 'switch to light mode';
-                $selectors.img().src = "https://images2.imgbox.com/b1/8f/nYGqGA6p_o.png";
-                $selectors.thatsAll().src = "https://images2.imgbox.com/1c/c1/bLYVqJtQ_o.png";
-                changeColorWhite($selectors.contact());
-                changeColorWhite($selectors.p());
-                changeColorWhite($selectors.h1());
-                changeColorWhite($selectors.h2());
-                changeColorWhite($selectors.span());
-                changeColorWhite($selectors.meal_finder());
-                changeColorWhite($selectors.techUSed());
-                changeColorWhite($selectors.email());
-                changeColorWhite($selectors.cert());
-                break;
+// Get prev and next songs
+async function getMoreSongs(url) {
+    const response = await fetch(`https://cors-anywhere.herokuapp.com/${url}`);
+    const data = await response.json();
 
-            default:
-                document.body.style.backgroundColor = 'white';
-                $selectors.btn().textContent = 'switch to dark mode';
-                $selectors.img().src = "https://avatars2.githubusercontent.com/u/58628678?s=400&u=924861bafd3fddf4103190598da3b9f59f495983&v=4";
-                $selectors.thatsAll().src = "https://images2.imgbox.com/66/b2/3NDjZFfy_o.png";
-                changeColorBlack($selectors.contact());
-                changeColorBlack($selectors.h1());
-                changeColorBlack($selectors.p());
-                changeColorBlack($selectors.h2());
-                changeColorBlack($selectors.span());
-                changeColorBlack($selectors.meal_finder());
-                changeColorBlack($selectors.techUSed());
-                changeColorBlack($selectors.email());
-                changeColorBlack($selectors.cert());
-
-                break;
-        }
-
-    })
-
-
-    function changeColorBlack(el) {
-        if (NodeList.prototype.isPrototypeOf(el)) {
-            for (let i = 0; i < el.length; i++) {
-                el[i].style.color = 'black';
-            }
-
-            return el;
-        }
-
-
-        if (el) {
-            el.style.color = 'black';
-            return el;
-        }
-
-    }
-
-    function changeColorWhite(el) {
-        if (NodeList.prototype.isPrototypeOf(el)) {
-            for (let i = 0; i < el.length; i++) {
-                el[i].style.color = 'white';
-            }
-
-            return el;
-        }
-
-
-        if (el) {
-            el.style.color = 'white';
-            return el;
-        }
-
-    }
-
+    showData(data);
 }
+
+// Get lyrics
+
+async function getLyrics(artist, title) {
+
+    const response = await fetch(`${apiURL}/v1/${artist}/${title}`);
+    const data = await response.json();
+
+    const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
+
+    result.innerHTML = `
+    <h2><strong>${artist}</strong></h2>
+    <span>
+    ${lyrics}
+    </span>
+    `;
+
+    more.innerHTML = '';
+}
+
+// Search by song or artist
+
+async function searchSong(term) {
+    const response = await fetch(`${apiURL}/suggest/${term}`);
+    const data = await response.json();
+
+    showData(data);
+}
+
+// Show result in DOM
+
+function showData(data) {
+    result.innerHTML = `
+    <ul class="songs">
+    ${data.data
+            .map(song =>
+                `<li>
+        <span>
+            <strong>${song.artist.name}</strong> - ${song.title}</span>
+        <button class="btn" data-artist="${song.artist.name}" data-songtitle="${song.title}">Get Lyrics</button>
+    </li>`).join('')}
+    </ul
+    `
+
+    if (data.prev || data.next) {
+        more.innerHTML = `
+        ${data.prev ? `<button id="next" onclick="getMoreSongs('${data.prev}')">Prev</button>` : ''}
+        ${data.next ? `<button id="next" onclick="getMoreSongs('${data.next}')">Next</button>` : ''}
+        `
+    } else {
+        more.innerHTML = '';
+    }
+}
+
+
+
+// Event listeners
+
+btn.addEventListener('click', e => {
+    e.preventDefault();
+
+    const searchTerm = search.value.trim();
+
+    if (!searchTerm) {
+        alert('The search field cannot be empty.');
+        return
+    }
+
+    searchSong(searchTerm);
+})
+
+result.addEventListener('click', e => {
+    const clickedEl = e.target;
+
+    if (clickedEl.tagName === 'BUTTON') {
+        const artist = clickedEl.getAttribute('data-artist');
+        const songTitle = clickedEl.getAttribute('data-songtitle');
+
+        getLyrics(artist, songTitle);
+    }
+})
