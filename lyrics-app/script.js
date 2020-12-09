@@ -5,14 +5,32 @@ const btn = document.querySelector('button');
 
 const apiURL = 'https://api.lyrics.ovh';
 
-// TO DO
+// Get prev and next songs
 async function getMoreSongs(url) {
-    const response = await fetch(`${url}`);
+    const response = await fetch(`https://cors-anywhere.herokuapp.com/${url}`);
     const data = await response.json();
 
     showData(data);
 }
 
+// Get lyrics
+
+async function getLyrics(artist, title) {
+
+    const response = await fetch(`${apiURL}/v1/${artist}/${title}`);
+    const data = await response.json();
+
+    const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
+
+    result.innerHTML = `
+    <h2><strong>${artist}</strong></h2>
+    <span>
+    ${lyrics}
+    </span>
+    `;
+
+    more.innerHTML = '';
+}
 
 // Search by song or artist
 
@@ -49,6 +67,7 @@ function showData(data) {
 }
 
 
+
 // Event listeners
 
 btn.addEventListener('click', e => {
@@ -57,9 +76,20 @@ btn.addEventListener('click', e => {
     const searchTerm = search.value.trim();
 
     if (!searchTerm) {
-        alert('The search field is empty.');
+        alert('The search field cannot be empty.');
         return
     }
 
     searchSong(searchTerm);
+})
+
+result.addEventListener('click', e => {
+    const clickedEl = e.target;
+
+    if (clickedEl.tagName === 'BUTTON') {
+        const artist = clickedEl.getAttribute('data-artist');
+        const songTitle = clickedEl.getAttribute('data-songtitle');
+
+        getLyrics(artist, songTitle);
+    }
 })
