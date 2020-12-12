@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+#scrollDown {
+    font-size: 15px;
+    cursor: pointer;
+}
+
 .meal-info {
     position: absolute;
     top: 0;
@@ -22,6 +27,7 @@
 .meal:hover .meal-info {
     opacity: 1;
 }
+
 .meals {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
