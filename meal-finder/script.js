@@ -4,7 +4,8 @@ const selectors = {
     random: () => document.querySelector('#random'),
     mealsEl: () => document.querySelector('#meals'),
     result: () => document.querySelector('#result'),
-    singleMeal: () => document.querySelector('#single-meal')
+    singleMeal: () => document.querySelector('#single-meal'),
+    scrollBtn: () => document.querySelector('#scrollDown')
 }
 
 // Search meal and fetch from API
@@ -100,7 +101,16 @@ function addMealToDOM(meal) {
     `
 }
 
+// Scroll FN
+function scrollFn() {
+    window.scrollTo({
+        top: 1000,
+        behavior: 'smooth'
+    })
+}
 // Event listeners
+selectors.scrollBtn().addEventListener('click', scrollFn);
+selectors.singleMeal().addEventListener('click', scrollFn);
 selectors.submit().addEventListener('submit', searchMeal);
 selectors.random().addEventListener('click', randomMeal);
 selectors.mealsEl().addEventListener('click', e => {
