@@ -9,14 +9,7 @@
     font-size: 17px;
 }
 
-#contact a {
-    color: white;
-    background-color: cornflowerblue;
-    text-decoration: none;
-}
-
 #skills {
-    background-color: cornflowerblue;
     color: black;
     font-weight: bold;
     letter-spacing: 3px;
@@ -134,8 +127,7 @@ h2 {
 
 #contact a {
     color: black;
-    background-color: cornflowerblue;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 1125px) {
