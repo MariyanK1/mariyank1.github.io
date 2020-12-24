@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+#wish {
+    font-size: 17px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+}
+
+#wishes {
+    font-size: 25px;
+}
+
 .year {
     font-size: 150px;
     z-index: -1;
