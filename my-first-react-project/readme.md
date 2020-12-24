@@ -5,4 +5,3 @@ Project includes:
 * Playing around and learning about state and props ;
 * I obviously prefer functional components, but I can do them with class App extents React.Component ;
 * ES6 Modules ;
-* Imo best practises ;
