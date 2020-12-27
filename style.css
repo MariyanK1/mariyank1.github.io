@@ -40,6 +40,17 @@
     border-radius: 50%;
 }
 
+#imgs {
+    border-radius: 50%;
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: cornflowerblue;
+    border-width: 5px;
+}
+
 .live {
     background-color: #4CAF50;
     border: none;
@@ -73,7 +84,8 @@
     font-weight: bold;
     background-color: black;
     color: white;
-    border: solid;
+    border: outset;
+    border-width: 5px;
     border-color: cornflowerblue;
     display: block;
     margin-left: auto;
