@@ -6,7 +6,6 @@ function darkMode() {
         p: () => document.getElementsByTagName('p')[0],
         h2: () => document.getElementsByTagName('h2')[0],
         span: () => document.querySelector('span'),
-        img: () => document.querySelector('#pic'),
         thatsAll: () => document.querySelector('#thatsAll'),
         meal_finder: () => document.querySelectorAll('.projectTitle'),
         techUSed: () => document.querySelectorAll('.techUsed'),
@@ -21,7 +20,6 @@ function darkMode() {
             case 'switch to dark mode':
                 document.body.style.backgroundColor = 'black';
                 $selectors.btn().textContent = 'switch to light mode';
-                $selectors.img().src = "https://images2.imgbox.com/b1/8f/nYGqGA6p_o.png";
                 $selectors.thatsAll().src = "https://images2.imgbox.com/1c/c1/bLYVqJtQ_o.png";
                 changeColorWhite($selectors.contact());
                 changeColorWhite($selectors.p());
@@ -37,7 +35,6 @@ function darkMode() {
             default:
                 document.body.style.backgroundColor = 'white';
                 $selectors.btn().textContent = 'switch to dark mode';
-                $selectors.img().src = "https://avatars2.githubusercontent.com/u/58628678?s=400&u=924861bafd3fddf4103190598da3b9f59f495983&v=4";
                 $selectors.thatsAll().src = "https://images2.imgbox.com/66/b2/3NDjZFfy_o.png";
                 changeColorBlack($selectors.contact());
                 changeColorBlack($selectors.h1());
@@ -48,7 +45,6 @@ function darkMode() {
                 changeColorBlack($selectors.techUSed());
                 changeColorBlack($selectors.email());
                 changeColorBlack($selectors.cert());
-
                 break;
         }
 
