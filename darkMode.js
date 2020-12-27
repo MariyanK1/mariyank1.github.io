@@ -6,7 +6,6 @@ function darkMode() {
         p: () => document.getElementsByTagName('p')[0],
         h2: () => document.getElementsByTagName('h2')[0],
         span: () => document.querySelector('span'),
-        thatsAll: () => document.querySelector('#thatsAll'),
         meal_finder: () => document.querySelectorAll('.projectTitle'),
         techUSed: () => document.querySelectorAll('.techUsed'),
         contact: () => document.querySelector('#contact'),
@@ -20,7 +19,6 @@ function darkMode() {
             case 'switch to dark mode':
                 document.body.style.backgroundColor = 'black';
                 $selectors.btn().textContent = 'switch to light mode';
-                $selectors.thatsAll().src = "https://images2.imgbox.com/1c/c1/bLYVqJtQ_o.png";
                 changeColorWhite($selectors.contact());
                 changeColorWhite($selectors.p());
                 changeColorWhite($selectors.h1());
@@ -35,7 +33,6 @@ function darkMode() {
             default:
                 document.body.style.backgroundColor = 'white';
                 $selectors.btn().textContent = 'switch to dark mode';
-                $selectors.thatsAll().src = "https://images2.imgbox.com/66/b2/3NDjZFfy_o.png";
                 changeColorBlack($selectors.contact());
                 changeColorBlack($selectors.h1());
                 changeColorBlack($selectors.p());
