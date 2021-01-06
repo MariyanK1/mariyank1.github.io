@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+* {
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+}
+.positive {
+  color: green;
+  font-weight: bolder;
+}
+
+.negative {
+  color: red;
+  font-weight: bolder;
+}
+
+table {
+  align-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table > thead > tr > th {
+  background-color: lightgrey;
+  padding: 10px;
+  width: 100px;
+}
+
+table > tbody {
+  padding: 10px;
+  width: 100px;
+}
