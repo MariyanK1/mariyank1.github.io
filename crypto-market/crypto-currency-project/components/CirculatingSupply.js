@@ -2,7 +2,6 @@ import React from "react";
 
 function CirculatingSupply(props) {
   return (
-    <>
       <td>
         <strong>
           {props.value.toLocaleString()}
@@ -10,7 +9,6 @@ function CirculatingSupply(props) {
           <small>{props.symbol.toUpperCase()}</small>
         </strong>
       </td>
-    </>
   );
 }
 
