@@ -2,7 +2,6 @@ import React from "react";
 
 function Th() {
   return (
-    <>
       <thead>
         <tr>
           <th>#</th>
@@ -16,7 +15,6 @@ function Th() {
           <th>Last 7 Days</th>
         </tr>
       </thead>
-    </>
   );
 }
 
