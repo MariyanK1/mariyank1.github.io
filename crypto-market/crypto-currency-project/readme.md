@@ -2,7 +2,7 @@
 
 How to run?
 
-1 Download the .zip file </br>
-2 Open with editor of your choosing</br>
-3 npm i -s</br>
-4 npm start
+1. Download the .zip file </br>
+2. Open with an editor of your choosing</br>
+3. npm i -s</br>
+4. npm start
