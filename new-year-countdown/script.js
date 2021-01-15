@@ -30,9 +30,9 @@ function generateWish(e) {
         'New Year’s is the time to forget all your fears, drink a few beers, leave behind all your tears!',
         'Happy New Year to you and your family! Wishing you 365 days of good luck!',
         'Happy new year to the sweetest person alive. Thanks for being in my life.',
-        'Happy new year to the best mother in the world! Wish you a blessed life.',
+        'Happy new year to the best person in the world! Wish you a blessed life.',
         'I wish you a very Happy New Year. Hope you have a great time ahead.',
-        'Happy New Year! I hope all your endeavors in 2021 are successful.'
+        'Happy New Year! I hope all your endeavors are successful.'
     ]
 
     $domElements.divWishes().innerHTML = wishes[Math.floor(Math.random() * Math.floor(6))];
