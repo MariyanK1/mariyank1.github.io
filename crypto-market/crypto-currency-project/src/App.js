@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./styles.css";
-import Place from "../components/CoinPlace";
-import Th from "../components/TableHead";
-import CoinName from "../components/CoinName";
-import CurrentPrice from "../components/CurrentPrice";
-import ChangePercent24h from "../components/ChangePercent24";
-import ChangePercent7 from "../components/ChangePercent7";
-import MarketCap from "../components/MarketCap";
-import SparkLinez from "../components/SparkLinez";
-import TotalVolume from "../components/TotalVolume";
-import CirculatingSupply from "../components/CirculatingSupply";
+import Place from "../src/components/CoinPlace";
+import Th from "../src/components/TableHead";
+import CoinName from "../src/components/CoinName";
+import CurrentPrice from "../src/components/CurrentPrice";
+import ChangePercent24h from "../src/components/ChangePercent24";
+import ChangePercent7 from "../src/components/ChangePercent7";
+import MarketCap from "../src/components/MarketCap";
+import SparkLinez from "../src/components/SparkLinez";
+import TotalVolume from "../src/components/TotalVolume";
+import CirculatingSupply from "../src/components/CirculatingSupply";
 
 const App = () => {
   const [coins, setCoins] = useState([]);
