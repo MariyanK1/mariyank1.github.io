@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.b6e9b597.chunk.css",
-    "main.js": "/static/js/main.b6985aa0.chunk.js",
-    "main.js.map": "/static/js/main.b6985aa0.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.18e1c4e7.js",
-    "runtime-main.js.map": "/static/js/runtime-main.18e1c4e7.js.map",
-    "static/js/2.b85b2dc3.chunk.js": "/static/js/2.b85b2dc3.chunk.js",
-    "static/js/2.b85b2dc3.chunk.js.map": "/static/js/2.b85b2dc3.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.3b5802d976bbb830947f820947f159ce.js": "/precache-manifest.3b5802d976bbb830947f820947f159ce.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.b6e9b597.chunk.css.map": "/static/css/main.b6e9b597.chunk.css.map",
-    "static/js/2.b85b2dc3.chunk.js.LICENSE.txt": "/static/js/2.b85b2dc3.chunk.js.LICENSE.txt"
+    "main.css": "/crypto-market/static/css/main.b6e9b597.chunk.css",
+    "main.js": "/crypto-market/static/js/main.b6985aa0.chunk.js",
+    "main.js.map": "/crypto-market/static/js/main.b6985aa0.chunk.js.map",
+    "runtime-main.js": "/crypto-market/static/js/runtime-main.c0316f5c.js",
+    "runtime-main.js.map": "/crypto-market/static/js/runtime-main.c0316f5c.js.map",
+    "static/js/2.b85b2dc3.chunk.js": "/crypto-market/static/js/2.b85b2dc3.chunk.js",
+    "static/js/2.b85b2dc3.chunk.js.map": "/crypto-market/static/js/2.b85b2dc3.chunk.js.map",
+    "index.html": "/crypto-market/index.html",
+    "precache-manifest.c95aaac0329e9f700bac4d0603370203.js": "/crypto-market/precache-manifest.c95aaac0329e9f700bac4d0603370203.js",
+    "service-worker.js": "/crypto-market/service-worker.js",
+    "static/css/main.b6e9b597.chunk.css.map": "/crypto-market/static/css/main.b6e9b597.chunk.css.map",
+    "static/js/2.b85b2dc3.chunk.js.LICENSE.txt": "/crypto-market/static/js/2.b85b2dc3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.18e1c4e7.js",
+    "static/js/runtime-main.c0316f5c.js",
     "static/js/2.b85b2dc3.chunk.js",
     "static/css/main.b6e9b597.chunk.css",
     "static/js/main.b6985aa0.chunk.js"
