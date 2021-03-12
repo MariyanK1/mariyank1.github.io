@@ -1,43 +1,38 @@
-import React, { Component } from "react";
+import { useState } from "react";
 
-export default class Search extends Component {
-  state = {
-    text: "",
-  };
-  handleSubmit = (e) => {
+function Search({ searchUsers, showClear, clearUsers, setAlert }) {
+  const [text, setText] = useState("");
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (this.state.text === "") {
-      this.props.setAlert("Please enter something", "light");
+
+    if (text === "") {
+      setAlert("Please enter something", "light");
     } else {
-      this.props.searchUsers(this.state.text);
-      this.setState({ text: "" });
+      searchUsers(text);
+      setText("");
     }
   };
 
-  onChange = (e) => this.setState({ [e.target.type]: e.target.value });
+  const onChange = (e) => setText(e.target.value);
 
-  render() {
-    const { showClear, clearUsers } = this.props;
-    return (
-      <div>
-        <form onSubmit={this.handleSubmit} className="form">
-          <input
-            type="text"
-            onChange={this.onChange}
-            placeholder="Search users..."
-          />
-          <input
-            type="submit"
-            value="Search"
-            className="btn btn-dark btn-block"
-          />
-          {showClear ? (
-            <button className="btn btn-light btn-block" onClick={clearUsers}>
-              Clear
-            </button>
-          ) : null}
-        </form>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <form onSubmit={handleSubmit} className="form">
+        <input type="text" onChange={onChange} placeholder="Search users..." />
+        <input
+          type="submit"
+          value="Search"
+          className="btn btn-dark btn-block"
+        />
+        {showClear ? (
+          <button className="btn btn-light btn-block" onClick={clearUsers}>
+            Clear
+          </button>
+        ) : null}
+      </form>
+    </div>
+  );
 }
+
+export default Search;
