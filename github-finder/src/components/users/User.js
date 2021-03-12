@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+import Repos from "../repos/Repos";
+
 class User extends Component {
   componentDidMount() {
     this.props.getUser(this.props.match.params.login);
+    this.props.getUserRepos(this.props.match.params.login);
   }
 
   render() {
@@ -22,7 +25,7 @@ class User extends Component {
       hireable,
     } = this.props.user;
 
-    const { loading } = this.props;
+    const { loading, repos } = this.props;
     if (loading) return <h1>Loading</h1>;
     return (
       <>
@@ -66,7 +69,7 @@ class User extends Component {
               <li>
                 {blog && (
                   <>
-                    <strong>Website:</strong>
+                    <strong>Website: </strong>
                     <a href={blog} rel="noreferrer" target="_blank">
                       {blog}
                     </a>
@@ -82,6 +85,7 @@ class User extends Component {
           <div className="badge badge-light">Public Repos: {public_repos}</div>
           <div className="badge badge-dark">Public Gists: {public_gists}</div>
         </div>
+        <Repos repos={repos} />
       </>
     );
   }
