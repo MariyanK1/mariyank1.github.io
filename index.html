@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Mariyan's Project Page</title>
+    <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -15,16 +16,18 @@
     <!-- HEADER 1 -->
     <h1>Mariyan Maksimov's Project Page</h1>
     <br><br>
-    <img id="imgs"
+    <img class="avatar"
         src="https://avatars2.githubusercontent.com/u/58628678?s=460&u=924861bafd3fddf4103190598da3b9f59f495983&v=4"
         alt="" srcset="">
     <br>
     <br>
+
     <!-- BUTTON DARK MODE -->
-    <button id="darkMode">switch to dark mode</button>
+    <button class="darkModeButton">switch to dark mode</button>
     <br>
+
     <!-- INTRO -->
-    <p id="intro">Welcome to my page! Thanks for stopping by.
+    <p class="intro">Welcome to my page! Thanks for stopping by.
         <br>
         I'm partially self-taught developer with a passion for the Web.
         <br>
@@ -32,7 +35,7 @@
         <br>
         My skills are:
         <br>
-        <span id="skills">html5, css, js, sass, react</span>
+        <span class="skills">html5, css, js, sass, react</span>
         <br>
         Currently looking for a <i>Jr. Frontend position or Internship</i>.
         <br><br>
@@ -49,18 +52,19 @@
         <a href="https://www.freecodecamp.org/certification/mariyan/responsive-web-design" target="_blank">Responsive
             Web Design</a>
     </p>
+
     <!-- CONTACT -->
-    <div id="contact">
+    <div class="contact">
         <span><b>Contact me: <a class="contact-anchor" href="mailto:mariyan.pickup@gmail.com">mariyan.pickup@gmail.com</a></span>
     </div>
 
     <!-- MY PROJECTS -->
     <h2>My Recent Projects:</h2>
-    <div id="projects">
+    <div class="projects">
         <p class="projectTitle">✔️Github Finder -
-            <a target="_blank" href="https://mariyank1.github.io/github-finder/" class="source">Screenshot</a>
+            <a target="_blank" href="https://mariyank1.github.io/github-finder/" class="sourceButton">Screenshot</a>
             <a target="_blank" href="https://github.com/MariyanK1/mariyank1.github.io/tree/main/github-finder"
-                class="source">Source</a>
+                class="sourceButton">Source</a>
         </p>
         <span class="techUsed">Tech used➔</span>
         <span class="tech">ReactJS</span>
@@ -69,9 +73,9 @@
         <br><br><br>
         
         <p class="projectTitle">✔️Crypto Market -
-            <a target="_blank" href="https://mariyank1.github.io/crypto-market/" class="source">Screenshot</a>
+            <a target="_blank" href="https://mariyank1.github.io/crypto-market/" class="sourceButton">Screenshot</a>
             <a target="_blank" href="https://github.com/MariyanK1/mariyank1.github.io/tree/main/crypto-market/"
-                class="source">Source</a>
+                class="sourceButton">Source</a>
         </p>
         <span class="techUsed">Tech used➔</span>
         <span class="tech">ReactJS</span>
@@ -81,9 +85,9 @@
         
         <p class="projectTitle">✔️Routing/Fetching -
             <a target="_blank" href="https://mariyank1.github.io/my-first-react-project/"
-                class="source">Live</a>
+                class="sourceButton">Live</a>
             <a target="_blank" href="https://github.com/MariyanK1/mariyank1.github.io/tree/main/my-first-react-project"
-                class="source">Source</a>
+                class="sourceButton">Source</a>
         </p>
         <span class="techUsed">Tech used➔</span>
         <span class="tech">ReactJS</span>
@@ -92,9 +96,9 @@
         <br><br><br>
 
         <p class="projectTitle">✔️New Year Countdown - <a target="_blank"
-                href="https://mariyank1.github.io/new-year-countdown/" class="live">Live</a>
+                href="https://mariyank1.github.io/new-year-countdown/" class="liveButton">Live</a>
             <a target="_blank" href="https://github.com/MariyanK1/mariyank1.github.io/tree/main/new-year-countdown"
-                class="source">Source</a>
+                class="sourceButton">Source</a>
         </p>
         <span class="techUsed">Tech used➔</span>
         <span class="tech">JS</span>
@@ -103,9 +107,9 @@
         <br><br><br>
 
         <p class="projectTitle">✔️Binary Search - <a target="_blank" href="https://mariyank1.github.io/binary-search/"
-                class="live">Live</a>
+                class="liveButton">Live</a>
             <a target="_blank" href="https://github.com/MariyanK1/mariyank1.github.io/tree/main/binary-search/"
-                class="source">Source</a>
+                class="sourceButton">Source</a>
         </p>
         <span class="techUsed">Tech used➔</span>
         <span class="tech">JS</span>
@@ -114,9 +118,9 @@
         <br><br><br>
 
         <p class="projectTitle">✔️Meal Finder - <a target="_blank" href="https://mariyank1.github.io/meal-finder/"
-                class="live">Live</a>
+                class="liveButton">Live</a>
             <a target="_blank" href="https://github.com/MariyanK1/mariyank1.github.io/tree/main/meal-finder"
-                class="source">Source</a>
+                class="sourceButton">Source</a>
         </p>
         <span class="techUsed">Tech used➔</span>
         <span class="tech">JS</span>
@@ -125,9 +129,9 @@
         <br><br><br>
 
         <p class="projectTitle">✔️Lyrics App - <a target="_blank" href="https://mariyank1.github.io/lyrics-app/"
-                class="live">Live</a>
+                class="liveButton">Live</a>
             <a target="_blank" href="https://github.com/MariyanK1/mariyank1.github.io/tree/main/lyrics-app"
-                class="source">Source</a>
+                class="sourceButton">Source</a>
         </p>
         <span class="techUsed">Tech used➔</span>
         <span class="tech">JS</span>
@@ -137,13 +141,8 @@
 
 </body> <br><br>
 
-<!-- SCRIPTS -->
-<script src="darkMode.js"></script>
-<script>darkMode()</script>
-
-
 <!-- FOOTER -->
-<footer><img id="thatsAll" src="https://images2.imgbox.com/66/b2/3NDjZFfy_o.png" alt="That's all Folks" srcset="">
+<footer><img class="footerImage" src="https://images2.imgbox.com/66/b2/3NDjZFfy_o.png" alt="That's all Folks" srcset="">
 </footer>
 
 </html>
