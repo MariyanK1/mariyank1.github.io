@@ -8,7 +8,7 @@
   font-size: 17px;
 }
 
-#skills {
+.skills {
   font-weight: bold;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -17,56 +17,33 @@
 .tech {
   color: white;
   text-transform: uppercase;
-  font-weight: bolder;
-  font-size: 16px;
   background-color: cornflowerblue;
   padding: 5px;
-  border: solid 1px;
-  border-color: black;
+  border: solid 1px black;
 }
 
 .projectTitle {
   font-size: 20px;
-  text-decoration: none;
 }
 
-#thatsAll {
-  width: 26%;
+.footerImage {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  width: 30%;
   border-radius: 50%;
-  border-style: solid;
-  border-color: cornflowerblue;
-  border-width: 5px;
+  border: cornflowerblue solid 5px;
 }
 
-#imgs {
+.avatar {
   border-radius: 50%;
   width: 200px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: solid;
-  border-color: cornflowerblue;
-  border-width: 5px;
+  margin: 0 auto;
+  border: cornflowerblue solid 5px;
 }
 
-.live {
+.liveButton {
   background-color: #4caf50;
-  border: none;
-  color: white;
-  padding: 10px;
-  margin: 2px;
-  font-size: 13px;
-  text-transform: uppercase;
-  border-radius: 10px;
-  transform: scale(10);
-}
-
-.source {
-  background-color: #4caf50;
-  border: none;
   color: white;
   padding: 10px;
   margin: 2px;
@@ -74,64 +51,65 @@
   text-transform: uppercase;
   border-radius: 10px;
 }
+
+.sourceButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  margin: 2px;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
 .contact-anchor {
   font-weight: 100;
 }
 
-#contact {
+.contact {
   text-align: center;
   font-size: 25px;
 }
 
-#darkMode {
+.contact a {
+  color: black;
+  text-decoration: underline;
+}
+
+.darkModeButton {
   font-weight: bold;
   background-color: black;
   color: white;
-  border: outset;
-  border-width: 5px;
-  border-color: cornflowerblue;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 15px;
   outline: none;
   cursor: pointer;
   text-transform: uppercase;
   padding: 9px 9px;
+  border: cornflowerblue solid 3.9px;
+  margin: 0 auto;
 }
 
 h1 {
-  display: block;
   margin: 0;
   font-size: 40px;
   text-align: center;
 }
 
 h2 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
   font-size: 35px;
 }
 
-#intro {
+.intro {
   font-size: 25px;
-  position: block;
-  align-items: center;
   text-align: center;
 }
 
-#intro a {
+.intro a {
   color: black;
 }
 
-#contact a {
-  color: black;
-  text-decoration: underline;
-}
-
-#projects {
+.projects {
   text-align: center;
-  align-items: center;
 }
