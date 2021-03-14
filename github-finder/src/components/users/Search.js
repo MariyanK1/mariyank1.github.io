@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 
 import GithubContext from "../../context/github/githubContext";
 
-function Search({ showClear, clearUsers, setAlert }) {
+function Search({ setAlert }) {
   const githubContext = useContext(GithubContext);
 
   const [text, setText] = useState("");
@@ -29,8 +29,11 @@ function Search({ showClear, clearUsers, setAlert }) {
           value="Search"
           className="btn btn-dark btn-block"
         />
-        {showClear ? (
-          <button className="btn btn-light btn-block" onClick={clearUsers}>
+        {githubContext.users.length > 0 ? (
+          <button
+            className="btn btn-light btn-block"
+            onClick={githubContext.clearUsers}
+          >
             Clear
           </button>
         ) : null}

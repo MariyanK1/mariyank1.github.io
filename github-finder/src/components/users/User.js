@@ -1,15 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
 import Repos from "../repos/Repos";
+import GithubContext from "../../context/github/githubContext";
 
-function User({ user, repos, loading, getUser, getUserRepos, match }) {
-  useEffect(() => {
-    getUser(match.params.login);
-    getUserRepos(match.params.login);
-    // eslint-disable-next-line
-  }, []);
+function User({ repos, getUserRepos, match }) {
+  const githubContext = useContext(GithubContext);
 
+  const { getUser, loading, user } = githubContext;
   const {
     name,
     avatar_url,
@@ -24,6 +22,12 @@ function User({ user, repos, loading, getUser, getUserRepos, match }) {
     public_gists,
     hireable,
   } = user;
+
+  useEffect(() => {
+    getUser(match.params.login);
+    getUserRepos(match.params.login);
+    // eslint-disable-next-line
+  }, []);
 
   if (loading) return <h1>Loading</h1>;
   return (
