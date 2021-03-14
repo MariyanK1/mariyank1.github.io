@@ -1,138 +1,137 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
 * {
-    font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
 }
 
 .techUsed {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 #skills {
-    font-weight: bold;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
-
 .tech {
-    color: white;
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 16px;
-    background-color: cornflowerblue;
-    padding: 5px;
-    border: solid 1px;
-    border-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 16px;
+  background-color: cornflowerblue;
+  padding: 5px;
+  border: solid 1px;
+  border-color: black;
 }
 
 .projectTitle {
-    font-size: 20px;
-    text-decoration: none;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 #thatsAll {
-    width: 26%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-    border-style: solid;
-    border-color: cornflowerblue;
-    border-width: 5px;
+  width: 26%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: cornflowerblue;
+  border-width: 5px;
 }
 
 #imgs {
-    border-radius: 50%;
-    width: 200px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: solid;
-    border-color: cornflowerblue;
-    border-width: 5px;
+  border-radius: 50%;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: cornflowerblue;
+  border-width: 5px;
 }
 
 .live {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px;
-    margin: 2px;
-    font-size: 13px;
-    text-transform: uppercase;
-    border-radius: 10px;
-    transform: scale(10);
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 2px;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  transform: scale(10);
 }
 
 .source {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px;
-    margin: 2px;
-    font-size: 13px;
-    text-transform: uppercase;
-    border-radius: 10px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 2px;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+.contact-anchor {
+  font-weight: 100;
 }
 
-
 #contact {
-    text-align: center;
-    font-size: 25px;
+  text-align: center;
+  font-size: 25px;
 }
 
 #darkMode {
-    font-weight: bold;
-    background-color: black;
-    color: white;
-    border: outset;
-    border-width: 5px;
-    border-color: cornflowerblue;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 15px;
-    outline: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    padding: 9px 9px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border: outset;
+  border-width: 5px;
+  border-color: cornflowerblue;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 9px 9px;
 }
 
 h1 {
-    display: block;
-    margin: 0;
-    font-size: 40px;
-    text-align: center;
+  display: block;
+  margin: 0;
+  font-size: 40px;
+  text-align: center;
 }
 
 h2 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: 35px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 35px;
 }
 
 #intro {
-    font-size: 25px;
-    position: block;
-    align-items: center;
-    text-align: center;
+  font-size: 25px;
+  position: block;
+  align-items: center;
+  text-align: center;
 }
 
 #intro a {
-    color: black;
+  color: black;
 }
 
-
 #contact a {
-    color: black;
-    text-decoration: underline;
+  color: black;
+  text-decoration: underline;
 }
 
 #projects {
-    text-align: center;
-    align-items: center;
+  text-align: center;
+  align-items: center;
 }
