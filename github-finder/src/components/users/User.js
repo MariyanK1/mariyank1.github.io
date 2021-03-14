@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import Repos from "../repos/Repos";
 import GithubContext from "../../context/github/githubContext";
 
-function User({ repos, getUserRepos, match }) {
+function User({ match }) {
   const githubContext = useContext(GithubContext);
 
-  const { getUser, loading, user } = githubContext;
+  const { getUser, loading, user, repos, getUserRepos } = githubContext;
   const {
     name,
     avatar_url,
