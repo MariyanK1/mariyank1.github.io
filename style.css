@@ -4,8 +4,18 @@
   font-family: "Lato", Arial, Helvetica, sans-serif;
 }
 
+.cert {
+  font-weight: bolder;
+  font-size: 27px;
+  margin-top: 21px;
+}
+
 .techUsed {
   font-size: 17px;
+}
+
+.intro p {
+  margin: 10px;
 }
 
 .skills {
@@ -24,11 +34,12 @@
 
 .projectTitle {
   font-size: 20px;
+  margin: 36px;
 }
 
 .footerImage {
   display: block;
-  margin: 0 auto;
+  margin: 40px auto 0px auto;
   width: 30%;
   border-radius: 50%;
   border: cornflowerblue solid 5px;
@@ -38,7 +49,7 @@
   border-radius: 50%;
   width: 200px;
   display: block;
-  margin: 0 auto;
+  margin: 39px auto;
   border: cornflowerblue solid 5px;
 }
 
@@ -69,6 +80,7 @@
 .contact {
   text-align: center;
   font-size: 25px;
+  margin-top: 17px;
 }
 
 .contact a {
@@ -87,7 +99,7 @@
   text-transform: uppercase;
   padding: 9px 9px;
   border: cornflowerblue solid 3.9px;
-  margin: 0 auto;
+  margin: 3px auto 22px;
 }
 
 h1 {
