@@ -8,7 +8,6 @@ import {
 
 // eslint-disable-next-line
 export default (state, action) => {
-  console.log(state, action);
   switch (action.type) {
     case SEARCH_USERS:
       return {
