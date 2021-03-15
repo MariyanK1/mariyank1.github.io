@@ -7,14 +7,14 @@ function darkMode() {
     p3: () => document.getElementsByTagName("p")[2],
     p4: () => document.getElementsByTagName("p")[3],
     p5: () => document.getElementsByTagName("p")[4],
-    p6: () => document.querySelector(".cert"),
+    p6: () => document.querySelector(".certifications"),
     h2: () => document.getElementsByTagName("h2")[0],
     span: () => document.querySelector("span"),
     meal_finder: () => document.querySelectorAll(".projectTitle"),
     techUSed: () => document.querySelectorAll(".techUsed"),
-    contact: () => document.querySelector(".contact"),
-    email: () => document.querySelector(".contact a"),
-    cert: () => document.querySelectorAll(".intro a"),
+    contact: () => document.querySelector(".contact-container"),
+    email: () => document.querySelector(".contact-container a"),
+    cert: () => document.querySelectorAll(".intro-container a"),
   };
 
   $selectors.btn().addEventListener("click", () => {
