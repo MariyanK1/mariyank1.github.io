@@ -25,7 +25,12 @@ function Search() {
   return (
     <div>
       <form onSubmit={handleSubmit} className="form">
-        <input type="text" onChange={onChange} placeholder="Search users..." />
+        <input
+          type="text"
+          onChange={onChange}
+          value={text}
+          placeholder="Search users..."
+        />
         <input
           type="submit"
           value="Search"

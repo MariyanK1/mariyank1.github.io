@@ -21,17 +21,10 @@ function App() {
             <div className="container">
               <Alert />
               <Switch>
-                <Route
-                  exact
-                  path="/"
-                  render={() => (
-                    <>
-                      <Search />
-                      <Users />
-                    </>
-                  )}
-                />
-
+                <Route exact path="/">
+                  <Search />
+                  <Users />
+                </Route>
                 <Route exact path="/about" component={About} />
                 <Route exact path="/user/:login" component={User} />
               </Switch>
