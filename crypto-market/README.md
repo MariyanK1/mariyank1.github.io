@@ -1,1 +1,1 @@
-![alt text](https://i.ibb.co/FbjZnqP/crypto.png)
+![crypto-market-sceenshot](https://i.ibb.co/FbjZnqP/crypto.png)
